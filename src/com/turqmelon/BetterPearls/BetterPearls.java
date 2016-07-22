@@ -59,7 +59,7 @@ public class BetterPearls extends JavaPlugin implements Listener {
 
     // When an ender-pearl is thrown (and not cancelled), store the origin
     // In the case the user can't land, we'll teleport them back to this position
-    @EventHandler(priority = EventPriority.MONITOR)
+    @EventHandler(priority = EventPriority.HIGHEST)
     public void onThrow(ProjectileLaunchEvent event){
         if (event.isCancelled())return;
         Projectile projectile = event.getEntity();
